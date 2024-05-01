@@ -1,3 +1,7 @@
+
+Project: QAAutomation Challenge API 2 
+Playwright.
+
 This project requires the following:
 Install Visual Studio Code.
 Install Node 
