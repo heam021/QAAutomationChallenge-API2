@@ -16,5 +16,5 @@ You need to have Axios installed with the command:
 npm install axios
 
 To be able to run the project you need to use the command 
-npc mocha.
+npx mocha.
 
