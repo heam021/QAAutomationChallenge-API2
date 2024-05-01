@@ -30,24 +30,24 @@ describe('PokeAPI', function () {
     it('should retrieve a list of all Poke Berries', async function () {
         const berries = await pokeAPI.getAllBerries();
 
-        // Verificar que se haya encontrado al menos una baya
+        // Verify that at least one berry has been found
         assert.ok(berries.length > 0, 'No se encontraron berries');
         console.log('Número de berries encontradas:', berries.length);
 
-        // Imprimir el arreglo de bayas
+        // Print the berry array
         console.log('Arreglo de bayas:', berries);
 
         console.log("=======================");
 
-        // Imprimir el nombre y la URL de cada berry
+        // Print the name and URL of each berry
         berries.forEach((berry, index) => {
             console.log(`Berry ${index + 1}: Name - ${berry.name}, URL - ${berry.url}`);
         });
 
-        // Generar el esquema POJO a partir de una baya
+        // Generate the POJO schema from a berry
         const berrySchema = new PokeBerry('string', 'string');
 
-        // Validar cada baya contra el esquema POJO
+        // Validate each berry against the POJO scheme
         berries.forEach((berry, index) => {
             assert.strictEqual(typeof berry.name, typeof berrySchema.name, `Tipo de dato de nombre de baya ${index + 1} no coincide`);
             assert.strictEqual(typeof berry.url, typeof berrySchema.url, `Tipo de dato de URL de baya ${index + 1} no coincide`);
